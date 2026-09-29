@@ -1,0 +1,71 @@
+name: Config Lint
+
+# Validates that every keymap XML and toolbox JSON file parses, that the toolbox
+# files only differ in shell_scripts.location and that every plugin list line is
+# a plugin.id@version pair or a // comment.
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  lint:
+    name: Validate config and plugin lists
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v7
+
+      - name: Parse every keymap XML file
+        run: |
+          hit=0
+          while IFS= read -r -d '' f; do
+            echo "Checking $f"
+            python3 -c "import sys, xml.etree.ElementTree as ET; ET.parse(sys.argv[1])" "$f" || hit=1
+          done < <(find keymaps -type f -name '*.xml' -print0)
+          exit "$hit"
+
+      - name: Parse every toolbox settings file
+        run: |
+          for f in toolbox/mac/settings.json toolbox/linux/settings.json toolbox/windows/settings.json; do
+            python3 -c "import json, sys; json.load(open(sys.argv[1]))" "$f"
+          done
+
+      - name: Confirm toolbox settings only differ in shell_scripts.location
+        run: |
+          python3 - <<'PYEOF'
+          import json
+          files = ["toolbox/mac/settings.json", "toolbox/linux/settings.json", "toolbox/windows/settings.json"]
+          docs = [json.load(open(f)) for f in files]
+          for d in docs:
+              d["shell_scripts"]["location"] = "STRIPPED"
+          assert all(d == docs[0] for d in docs), "toolbox settings differ beyond shell_scripts.location"
+          PYEOF
+
+      - name: Check every plugin list line
+        run: |
+          hit=0
+          for f in plugins/*.txt; do
+            echo "Checking $f"
+            while IFS= read -r line; do
+              [ -z "$line" ] && continue
+              case "$line" in
+                //*) continue ;;
+                *@*) continue ;;
+                *)
+                  echo "::error file=$f::line does not match id@version or // comment: $line"
+                  hit=1
+                  ;;
+              esac
+            done < "$f"
+          done
+          exit "$hit"
