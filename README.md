@@ -33,6 +33,7 @@ Full walkthrough in [guides/setup.md](guides/setup.md).
 
 | Path | Contents |
 | --- | --- |
+| [`ACCESSIBILITY.md`](ACCESSIBILITY.md) | How the shared VS Code keymap keeps one set of shortcuts across editors |
 | [`plugins/`](plugins/) | One plugin list per IDE |
 | [`keymaps/`](keymaps/) | Custom keymaps for macOS and for Windows and Linux |
 | [`file-templates/`](file-templates/) | The `Class.java` file template |

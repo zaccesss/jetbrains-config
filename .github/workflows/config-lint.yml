@@ -1,6 +1,6 @@
 name: Config Lint
 
-# Validates that every keymap XML and toolbox JSON file parses, that the toolbox
+# validates that every keymap XML and toolbox JSON file parses, that the toolbox
 # files only differ in shell_scripts.location and that every plugin list line is
 # a plugin.id@version pair or a // comment.
 

@@ -28,7 +28,6 @@ fixes and platform corrections.
 ## Style rules
 
 > [!IMPORTANT]
-> - **UK English** in prose and documentation.
 > - **No secrets or licence keys**, ever.
 
 ## Reporting bugs
