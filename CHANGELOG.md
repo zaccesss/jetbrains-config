@@ -9,6 +9,10 @@ Versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+### Added
+
+- High Contrast Dark and High Contrast Light colour schemes in `colors/`, with setup steps for following the system's light and dark setting.
+
 ### Changed
 
 - `ACCESSIBILITY.md`: a note that the settings are preferences, a callout for the keymap plugin that must be installed first and a link to the shared accessibility statement.

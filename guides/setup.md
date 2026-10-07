@@ -33,6 +33,26 @@ Use each IDE's own Settings UI:
 - File template: Settings > Editor > File and Code Templates > Files > Class, paste in the
   contents of `file-templates/Class.java`.
 
+## 5. Follow the system's light and dark setting
+
+`colors/` holds two colour schemes that set only the console and terminal colours, on top of a
+bundled editor scheme, so code keeps its usual highlighting:
+
+| Scheme | Built on | Use with the theme |
+| --- | --- | --- |
+| High Contrast Dark | High contrast | High Contrast |
+| High Contrast Light | Default (IntelliJ Light) | IntelliJ Light |
+
+1. Settings > Editor > Color Scheme > gear icon > Import Scheme, once for each file in `colors/`.
+2. Settings > Appearance & Behavior > Appearance: turn on **Sync with OS**, then use the gear icon
+   beside it to pick High Contrast for dark and IntelliJ Light for light.
+3. Switch the system to dark, pick High Contrast Dark under Editor > Color Scheme. Switch to light,
+   pick High Contrast Light. The IDE remembers the scheme for each theme from then on.
+
+The colours match the High Contrast palette in
+[terminal-config](https://github.com/zaccesss/terminal-config), so a command's output reads the
+same in the IDE's terminal as in any other terminal.
+
 ## Applying by file copy instead
 
 Copying files straight into an IDE's config directory is safe only while that IDE is fully
@@ -48,8 +68,23 @@ Config directories are named per IDE and version, for example `IntelliJIdea2026.
 | Linux | `~/.config/JetBrains/<IDE><version>` |
 | Windows | `%APPDATA%\JetBrains\<IDE><version>` |
 
-Copy the keymap into that directory's `keymaps/` folder and the file template into
-`fileTemplates/internal/`, then select the keymap in Settings > Keymap.
+Copy the keymap into that directory's `keymaps/` folder, the file template into
+`fileTemplates/internal/` and the colour schemes into `colors/`, then select the keymap in
+Settings > Keymap. The system sync for step 5 goes in `options/laf.xml`:
+
+```xml
+<application>
+  <component name="LafManager" autodetect="true">
+    <laf themeId="JetBrainsHighContrastTheme" />
+    <preferred-light-laf themeId="ExperimentalLight" />
+    <preferred-dark-laf themeId="JetBrainsHighContrastTheme" />
+    <lafs-to-previous-schemes>
+      <laf-to-scheme laf="JetBrainsHighContrastTheme" scheme="High Contrast Dark" />
+      <laf-to-scheme laf="ExperimentalLight" scheme="High Contrast Light" />
+    </lafs-to-previous-schemes>
+  </component>
+</application>
+```
 
 ## Adding another IDE
 
