@@ -15,7 +15,9 @@ The keymap is built so one set of muscle memory covers JetBrains IDEs and VS Cod
 
 ## Vision
 
-Themes and fonts live in each IDE's own settings, which this repository deliberately does not track. JetBrains IDEs ship a High Contrast theme and a screen reader option under Settings, Appearance & Behavior, Appearance.
+- The IDE follows the system's light and dark setting: the built-in High Contrast theme in dark mode, IntelliJ Light in light mode.
+- The two schemes in `colors/` give the console and terminal the High Contrast palette from [terminal-config](https://github.com/zaccesss/terminal-config): vivid colours on black in dark mode, every colour at 7:1 or more on white in light mode. Code highlighting stays the bundled scheme's own.
+- Fonts live in each IDE's own settings, which this repository does not track. A screen reader option sits under Settings > Appearance & Behavior > Appearance.
 
 ## Feedback wanted
 
