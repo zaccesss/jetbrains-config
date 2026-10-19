@@ -9,20 +9,11 @@ Versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
-### Fixed
-
-- The setup and plugin guides now warn that `intellij.vitejs` from the DataSpell list does not install on DataSpell 2026.1, since Marketplace has no Vite build for it.
+## 2026-10-19
 
 ### Added
 
 - High Contrast Dark and High Contrast Light colour schemes in `colors/`, with setup steps for following the system's light and dark setting.
-
-### Changed
-
-- `ACCESSIBILITY.md`: a note that the settings are preferences, a callout for the keymap plugin that must be installed first and a link to the shared accessibility statement.
-
-### Added
-
 - Initial release: plugin lists for IntelliJ IDEA, PyCharm, WebStorm, CLion and DataSpell
 - Custom keymaps for macOS and for Windows and Linux, layered on the VS Code base keymaps
 - A `Class.java` file template
@@ -33,4 +24,9 @@ Versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ### Changed
 
+- `ACCESSIBILITY.md`: a note that the settings are preferences, a callout for the keymap plugin that must be installed first and a link to the shared accessibility statement.
 - Tidied code comments and the contributor guide.
+
+### Fixed
+
+- The setup and plugin guides now warn that `intellij.vitejs` from the DataSpell list does not install on DataSpell 2026.1, since Marketplace has no Vite build for it.
