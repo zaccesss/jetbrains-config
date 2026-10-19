@@ -9,6 +9,10 @@ Versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+### Fixed
+
+- The setup and plugin guides now warn that `intellij.vitejs` from the DataSpell list does not install on DataSpell 2026.1, since Marketplace has no Vite build for it.
+
 ### Added
 
 - High Contrast Dark and High Contrast Light colour schemes in `colors/`, with setup steps for following the system's light and dark setting.

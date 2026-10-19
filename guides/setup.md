@@ -15,6 +15,11 @@ Marketplace, searching by plugin id (the part before the `@`).
 > compatible with your IDE build, so search by id and take the current version rather than hunting
 > for the exact pinned one.
 
+> [!WARNING]
+> `intellij.vitejs` in `plugins/dataspell.txt` does not install on DataSpell 2026.1: Marketplace
+> offers no Vite build for DataSpell, so the headless `installPlugins`
+> command reports it as an unknown plugin. Skip it there. Every other plugin in the list installs.
+
 Install `com.intellij.plugins.vscodekeymap` before applying the custom keymap in step 4, since the
 keymap's parent comes from that plugin.
 

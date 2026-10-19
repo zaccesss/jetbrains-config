@@ -14,7 +14,7 @@ PyCharm, WS for WebStorm, CL for CLion and DS for DataSpell.
 | `PythonCore` | Python support, the Community Edition core | IU, WS, CL, DS |
 | `Pythonid` | Python enhancements bundled with IntelliJ IDEA Ultimate | IU |
 | `JavaScriptDebugger` | JavaScript debugging engine | WS, CL |
-| `intellij.vitejs` | Vite support | CL, DS |
+| `intellij.vitejs` | Vite support. Marketplace has no build for DataSpell 2026.1, see [setup.md](setup.md#2-install-the-plugins) | CL, DS |
 | `intellij.prettierJS` | Prettier integration | CL |
 | `ru.adelf.idea.dotenv` | `.env` file highlighting and key completion | all |
 
