@@ -9,6 +9,10 @@ Versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+### Changed
+
+- The theme is now Zacess Deep Contrast Dark from the Zacess Themes plugin (`com.zacess.themes@0.3.0`, added to every list in `plugins/`), fixed whatever the system appearance, in place of the built-in High Contrast theme following the system. `options/laf.xml` and `options/colors.scheme.xml` hold the setting with the Deep Contrast pair ready for Sync with OS. The earlier High Contrast schemes stay in `colors/`.
+
 ## 2026-10-19
 
 ### Added

@@ -10,6 +10,7 @@ com.intellij.kubernetes@261.26222.18
 org.editorconfig.editorconfigjetbrains@261.22158.182
 
 // Editor feel and theming
+com.zacess.themes@0.3.0
 com.intellij.plugins.vscodekeymap@261.22158.180
 com.markskelton.one-dark-theme@6.2.5
 

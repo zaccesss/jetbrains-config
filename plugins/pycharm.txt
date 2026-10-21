@@ -3,6 +3,7 @@ org.jetbrains.plugins.vue@261.24374.154
 ru.adelf.idea.dotenv@261.24374.154
 
 // Editor feel and theming
+com.zacess.themes@0.3.0
 com.intellij.plugins.vscodekeymap@262.8665.258
 
 // Testing and diagnostics

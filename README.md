@@ -16,9 +16,11 @@ the same setup instead of drifting on its own defaults.
   [guides/plugins.md](guides/plugins.md).
 - **`keymaps/`** - a small custom keymap layered on top of the `VSCode OSX` and `VSCode` keymaps,
   one file for macOS and one for Windows and Linux. See [guides/reference.md](guides/reference.md#keymaps).
-- **`colors/`** - High Contrast Dark and High Contrast Light, two colour schemes that set the
-  console and terminal colours for the system's dark and light modes. See
-  [guides/setup.md](guides/setup.md#5-follow-the-systems-light-and-dark-setting).
+- **`options/`** - `laf.xml` and `colors.scheme.xml`, which set the Zacess Deep Contrast Dark theme
+  and editor scheme from the Zacess Themes plugin, fixed whatever the system appearance. See
+  [guides/setup.md](guides/setup.md#5-use-the-zacess-deep-contrast-theme).
+- **`colors/`** - High Contrast Dark and High Contrast Light, the earlier colour schemes that set
+  only the console and terminal colours on top of a bundled scheme.
 - **`file-templates/`** - a `Class.java` template with a `main` method.
 - **`toolbox/<platform>/settings.json`** - JetBrains Toolbox's user-configurable settings.
   `shell_scripts.location` is the one value that differs per platform.
@@ -36,7 +38,7 @@ Full walkthrough in [guides/setup.md](guides/setup.md).
 
 | Path | Contents |
 | --- | --- |
-| [`ACCESSIBILITY.md`](ACCESSIBILITY.md) | Light and dark high contrast plus the shared VS Code keymap that keeps one set of shortcuts across editors |
+| [`ACCESSIBILITY.md`](ACCESSIBILITY.md) | The Zacess Deep Contrast theme plus the shared VS Code keymap that keeps one set of shortcuts across editors |
 | [`plugins/`](plugins/) | One plugin list per IDE |
 | [`keymaps/`](keymaps/) | Custom keymaps for macOS and for Windows and Linux |
 | [`colors/`](colors/) | Console and terminal colours for dark and light mode |
