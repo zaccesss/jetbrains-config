@@ -38,25 +38,22 @@ Use each IDE's own Settings UI:
 - File template: Settings > Editor > File and Code Templates > Files > Class, paste in the
   contents of `file-templates/Class.java`.
 
-## 5. Follow the system's light and dark setting
+## 5. Use the Zacess Deep Contrast theme
 
-`colors/` holds two colour schemes that set only the console and terminal colours, on top of a
-bundled editor scheme, so code keeps its usual highlighting:
+The Zacess Themes plugin ([JetBrains Marketplace](https://plugins.jetbrains.com/plugin/35082-zacess-themes),
+`com.zacess.themes`, in every list in `plugins/`) adds the eight Zacess themes, each with its own
+editor colour scheme, the IDE's terminal colours included.
 
-| Scheme | Built on | Use with the theme |
-| --- | --- | --- |
-| High Contrast Dark | High contrast | High Contrast |
-| High Contrast Light | Default (IntelliJ Light) | IntelliJ Light |
+1. Settings > Plugins > Marketplace: install **Zacess Themes**.
+2. Settings > Appearance & Behavior > Appearance: pick **Zacess Deep Contrast Dark** as the theme,
+   with **Sync with OS** off so it stays fixed whatever the system appearance. Its editor scheme
+   comes with it.
+3. To follow the system instead, turn on **Sync with OS** and use the gear icon beside it to pick
+   Zacess Deep Contrast Dark for dark and Zacess Deep Contrast Light for light.
 
-1. Settings > Editor > Color Scheme > gear icon > Import Scheme, once for each file in `colors/`.
-2. Settings > Appearance & Behavior > Appearance: turn on **Sync with OS**, then use the gear icon
-   beside it to pick High Contrast for dark and IntelliJ Light for light.
-3. Switch the system to dark, pick High Contrast Dark under Editor > Color Scheme. Switch to light,
-   pick High Contrast Light. The IDE remembers the scheme for each theme from then on.
-
-The colours match the High Contrast palette in
-[terminal-config](https://github.com/zaccesss/terminal-config), so a command's output reads the
-same in the IDE's terminal as in any other terminal.
+The two schemes in `colors/`, High Contrast Dark and High Contrast Light, are the earlier setup:
+they set only the console and terminal colours on top of a bundled editor scheme. They stay for
+anyone who prefers the built-in High Contrast theme.
 
 ## Applying by file copy instead
 
@@ -75,21 +72,10 @@ Config directories are named per IDE and version, for example `IntelliJIdea2026.
 
 Copy the keymap into that directory's `keymaps/` folder, the file template into
 `fileTemplates/internal/` and the colour schemes into `colors/`, then select the keymap in
-Settings > Keymap. The system sync for step 5 goes in `options/laf.xml`:
-
-```xml
-<application>
-  <component name="LafManager" autodetect="true">
-    <laf themeId="JetBrainsHighContrastTheme" />
-    <preferred-light-laf themeId="ExperimentalLight" />
-    <preferred-dark-laf themeId="JetBrainsHighContrastTheme" />
-    <lafs-to-previous-schemes>
-      <laf-to-scheme laf="JetBrainsHighContrastTheme" scheme="High Contrast Dark" />
-      <laf-to-scheme laf="ExperimentalLight" scheme="High Contrast Light" />
-    </lafs-to-previous-schemes>
-  </component>
-</application>
-```
+Settings > Keymap. With the plugin installed, step 5 is the two files in `options/`, copied into the
+directory's `options/` folder: `laf.xml` sets the Zacess Deep Contrast Dark theme with
+`autodetect="false"` and the Deep Contrast pair ready for Sync with OS. `colors.scheme.xml` sets
+the matching editor scheme.
 
 ## Adding another IDE
 

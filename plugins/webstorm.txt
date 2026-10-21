@@ -5,6 +5,7 @@ ru.adelf.idea.dotenv@262.10315.69
 JavaScriptDebugger@261.24374.151
 
 // Editor feel and theming
+com.zacess.themes@0.3.0
 com.intellij.plugins.vscodekeymap@262.8665.258
 
 // Cloud and containers

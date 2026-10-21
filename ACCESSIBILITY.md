@@ -15,8 +15,8 @@ The keymap is built so one set of muscle memory covers JetBrains IDEs and VS Cod
 
 ## Vision
 
-- The IDE follows the system's light and dark setting: the built-in High Contrast theme in dark mode, IntelliJ Light in light mode.
-- The two schemes in `colors/` give the console and terminal the High Contrast palette from [terminal-config](https://github.com/zaccesss/terminal-config): vivid colours on black in dark mode, every colour at 7:1 or more on white in light mode. Code highlighting stays the bundled scheme's own.
+- The IDE theme and editor colour scheme are Zacess Deep Contrast Dark from the Zacess Themes plugin: white on pure black with deep, fully saturated colours and yellow and cyan outlines. It stays fixed whatever the system appearance; **Sync with OS** switches to Zacess Deep Contrast Light in light mode. All eight Zacess themes come with the plugin.
+- The console and terminal take their colours from the theme. The earlier High Contrast schemes in `colors/` stay available.
 - Fonts live in each IDE's own settings, which this repository does not track. A screen reader option sits under Settings > Appearance & Behavior > Appearance.
 
 ## Feedback wanted

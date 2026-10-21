@@ -12,6 +12,7 @@ PerforceDirectPlugin@262.8665.176
 Subversion@262.10315.131
 
 // Editor feel and theming
+com.zacess.themes@0.3.0
 com.intellij.plugins.vscodekeymap@262.8665.258
 com.markskelton.one-dark-theme@6.2.5
 
