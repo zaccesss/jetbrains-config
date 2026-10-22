@@ -55,6 +55,16 @@ The two schemes in `colors/`, High Contrast Dark and High Contrast Light, are th
 they set only the console and terminal colours on top of a bundled editor scheme. They stay for
 anyone who prefers the built-in High Contrast theme.
 
+## 6. Set the terminal font
+
+The built-in terminal uses GeistMono Nerd Font, so the Nerd Font symbols a themed prompt uses
+(branch, status and battery icons) draw. The font is free under the SIL Open Font License; install
+it from the [Nerd Fonts releases](https://github.com/ryanoasis/nerd-fonts/releases) first.
+
+1. Settings > Tools > Terminal: set **Font** to **GeistMono Nerd Font**.
+
+The editor font is unchanged. A missing font falls back to the IDE's default terminal font.
+
 ## Applying by file copy instead
 
 Copying files straight into an IDE's config directory is safe only while that IDE is fully
@@ -72,10 +82,10 @@ Config directories are named per IDE and version, for example `IntelliJIdea2026.
 
 Copy the keymap into that directory's `keymaps/` folder, the file template into
 `fileTemplates/internal/` and the colour schemes into `colors/`, then select the keymap in
-Settings > Keymap. With the plugin installed, step 5 is the two files in `options/`, copied into the
-directory's `options/` folder: `laf.xml` sets the Zacess Deep Contrast Dark theme with
+Settings > Keymap. With the plugin installed, steps 5 and 6 are the three files in `options/`, copied into
+the directory's `options/` folder: `laf.xml` sets the Zacess Deep Contrast Dark theme with
 `autodetect="false"` and the Deep Contrast pair ready for Sync with OS. `colors.scheme.xml` sets
-the matching editor scheme.
+the matching editor scheme. `terminal-font.xml` sets the terminal font.
 
 ## Adding another IDE
 
