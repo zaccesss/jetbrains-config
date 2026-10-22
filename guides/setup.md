@@ -55,15 +55,20 @@ The two schemes in `colors/`, High Contrast Dark and High Contrast Light, are th
 they set only the console and terminal colours on top of a bundled editor scheme. They stay for
 anyone who prefers the built-in High Contrast theme.
 
-## 6. Set the terminal font
+## 6. Set the fonts
 
-The built-in terminal uses GeistMono Nerd Font, so the Nerd Font symbols a themed prompt uses
-(branch, status and battery icons) draw. The font is free under the SIL Open Font License; install
-it from the [Nerd Fonts releases](https://github.com/ryanoasis/nerd-fonts/releases) first.
+The editor uses GeistMono Nerd Font and the built-in terminal uses its Mono build, GeistMono Nerd Font
+Mono, whose icons fit one cell, so the Nerd Font symbols a themed prompt uses (branch, language and
+battery icons) draw whole. The font is free under the SIL Open Font License; install it from the
+[Nerd Fonts releases](https://github.com/ryanoasis/nerd-fonts/releases) first.
 
-1. Settings > Tools > Terminal: set **Font** to **GeistMono Nerd Font**.
+1. Settings > Editor > Font: set **Font** to **GeistMono Nerd Font**.
+2. Settings > Tools > Terminal: set **Font** to **GeistMono Nerd Font Mono**.
 
-The editor font is unchanged. A missing font falls back to the IDE's default terminal font.
+On Windows the same fonts are listed as **GeistMono NF** and **GeistMono NFM**. The IDE's Java
+runtime only sees fonts installed for all users. Install the font for all users (right-click each
+`.otf` file, then **Install for all users**) and pick those two names. A missing font falls back to
+the IDE's default.
 
 ## Applying by file copy instead
 
@@ -82,10 +87,11 @@ Config directories are named per IDE and version, for example `IntelliJIdea2026.
 
 Copy the keymap into that directory's `keymaps/` folder, the file template into
 `fileTemplates/internal/` and the colour schemes into `colors/`, then select the keymap in
-Settings > Keymap. With the plugin installed, steps 5 and 6 are the three files in `options/`, copied into
+Settings > Keymap. With the plugin installed, steps 5 and 6 are the four files in `options/`, copied into
 the directory's `options/` folder: `laf.xml` sets the Zacess Deep Contrast Dark theme with
 `autodetect="false"` and the Deep Contrast pair ready for Sync with OS. `colors.scheme.xml` sets
-the matching editor scheme. `terminal-font.xml` sets the terminal font.
+the matching editor scheme. `editor-font.xml` and `terminal-font.xml` set the two fonts. On Windows,
+copy the two font files from `options/windows/` instead, since they use the Windows font names.
 
 ## Adding another IDE
 
