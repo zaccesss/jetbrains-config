@@ -18,9 +18,10 @@ the same setup instead of drifting on its own defaults.
   one file for macOS and one for Windows and Linux. See [guides/reference.md](guides/reference.md#keymaps).
 - **`options/`** - `laf.xml` and `colors.scheme.xml`, which set the Zacess Deep Contrast Dark theme
   and editor scheme from the Zacess Themes plugin, fixed whatever the system appearance. See
-  [guides/setup.md](guides/setup.md#5-use-the-zacess-deep-contrast-theme). `terminal-font.xml`
-  sets the built-in terminal to GeistMono Nerd Font, which must be installed first. See
-  [guides/setup.md](guides/setup.md#6-set-the-terminal-font).
+  [guides/setup.md](guides/setup.md#5-use-the-zacess-deep-contrast-theme). `editor-font.xml`
+  and `terminal-font.xml` set GeistMono Nerd Font and its Mono build, which must be installed first;
+  `options/windows/` has the same files with the Windows font names. See
+  [guides/setup.md](guides/setup.md#6-set-the-fonts).
 - **`colors/`** - High Contrast Dark and High Contrast Light, the earlier colour schemes that set
   only the console and terminal colours on top of a bundled scheme.
 - **`file-templates/`** - a `Class.java` template with a `main` method.
