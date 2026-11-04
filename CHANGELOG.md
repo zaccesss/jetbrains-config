@@ -9,9 +9,12 @@ Versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.1.0] - 2026-11-03
+
 ### Changed
 
 - The editor uses GeistMono Nerd Font (`options/editor-font.xml`) and the built-in terminal its Mono build, GeistMono Nerd Font Mono, whose icons fit one cell (`options/terminal-font.xml`). `options/windows/` holds the same two files with the Windows font names, GeistMono NF and GeistMono NFM. The setup guide covers both and the all-users install the IDEs need on Windows.
+- Routine tidy-up
 
 ### Added
 
